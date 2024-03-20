@@ -1,0 +1,691 @@
+* {
+  font-family: sans-serif;
+}
+
+.body {
+  background-color: gray;
+}
+
+.navbar {
+  background-color: grey;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.carousel-caption {
+  bottom: 220px;
+  z-index: 2;
+}
+
+.carousel-caption h5 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+.carousel-caption p {
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/*======================================================== NAV BAR */
+.my-navbar {
+  background-color: gray;
+}
+
+.nav-item .nav-link {
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  font-family: Arial;
+  letter-spacing: 2px;
+  margin: 0px 12px;
+  text-transform: uppercase;
+}
+
+.mega-menu {
+  background-color: transparent;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  border: none;
+}
+
+.dropdown-item {
+  padding: 12px 40px 12px 20px;
+  font-size: 15px;
+  font-family: Arial;
+  color: black;
+  font-weight: lighter;
+  background-color: #d3d3d3;
+  transform-origin: center;
+  animation: rotate 1.5s ease 1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: perspective(600px) rotatey(90deg);
+    transform-origin: center;
+  }
+
+  100% {
+    transform: perspective(600px) rotatey(0deg);
+    transform-origin: center;
+  }
+}
+
+.dropdown-item:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.dropdown-item:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.dropdown-item:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+.dropdown-item:nth-of-type(4) {
+  animation-delay: 0.3s;
+}
+
+.dropdown-item:nth-of-type(5) {
+  animation-delay: 0.4s;
+}
+
+.dropdown-item:hover {
+  background-color: gray;
+  color: white;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-family: Impact;
+  font-size: 20px;
+  color: #198754;
+  letter-spacing: 2px;
+}
+
+.navbar-nav a {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.navbar-light .navbar-band {
+  color: #000;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.navbar-light .navbar-band:focus,
+.navbar-light .navbar-band:hover {
+  color: #000;
+}
+
+.navbar-light .navbar-nav,
+.navbar-link {
+  color: #000;
+}
+
+.w-100 {
+  height: 100vh;
+}
+
+/* CAROUSEL */
+
+/* ============================================== responsive css ================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .carousel-caption {
+    bottom: 370px;
+  }
+
+  .carousel-caption p {
+    width: 100%;
+  }
+
+  .card {
+    margin-bottom: 30px;
+  }
+
+  .img-area {
+    width: 80%;
+    height: 40%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .carousel-caption {
+    bottom: 128px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 17px;
+  }
+
+  .carousel-caption a {
+    padding: 10px 15px;
+  }
+
+  .carousel-caption p {
+    width: 100%;
+    line-height: 1.6;
+    font-size: 12px;
+  }
+
+  .about-text {
+    padding-top: 50px;
+  }
+
+  .card {
+    margin-bottom: 30px;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #34495e;
+  color: #050505;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* ================================================ CARDS ==========================================================*/
+.card {
+  position: relative;
+  width: 600px;
+  height: 700px;
+  background: #fff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.img-bx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateY(30px) scale(0.5);
+  transform-origin: top;
+}
+
+.img-bx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.content .detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.content .detail h2 {
+  color: #444;
+  font-size: 1.6em;
+  font-weight: bolder;
+}
+
+.content .detail h2 span {
+  font-size: 0.7em;
+  color: #03a9f4;
+  font-weight: bold;
+}
+
+.sci {
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+}
+
+.sci li {
+  list-style: none;
+  margin: 4px;
+}
+
+.sci li a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1.5em;
+  color: #444;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.5s;
+}
+
+.sci li a:hover {
+  background: #03a9f4;
+  color: #fff;
+}
+
+.section {
+  padding: 100% 0;
+}
+
+/*=================================================== SOCIAL MEDIA ICONS =========================================== */
+.social-media {
+  z-index: 888;
+  position: fixed;
+  right: 30px;
+  display: flex;
+  margin-top: 250px;
+  flex-direction: column;
+  transition: 0.5s ease;
+}
+
+.social-media a {
+  color: #198754;
+  overflow-block: visible !important;
+  font-size: 2.5em;
+  transform: 0.3s ease;
+}
+
+.social-media a:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.social-media a:hover {
+  transform: scale(1.4);
+}
+
+/* ==================================================== CARDS ======================================================= */
+header {
+  padding: 100px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.card {
+  width: 40%;
+  font-size: 24px;
+  margin: 10px 10px;
+  border: 1px solid #d8d5d5;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d3d3d3;
+  box-shadow: 0 0 10px rgba rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  color: #000;
+  cursor: pointer;
+}
+
+.card:hover {
+  border: 0px 0px 15px #000000;
+  box-shadow: 0px 0px 15px #000000;
+  overflow: hidden;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(2.5);
+  -ms-transform: scale(2.5);
+  -ms-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(2.5);
+  transition: all 100ms ease-in;
+  transform: scale(2.5);
+}
+
+.card-1 {
+  width: 20%;
+  font-size: 24px;
+  margin-top: 2rem;
+  margin: 10px 10px;
+  border: 1px solid #fcfafa;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+}
+
+.card-1 .header {
+  font-size: large;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.card-2 {
+  width: 60%;
+  font-size: 24px;
+  margin: 10px 10px;
+  margin-top: 0.7rem;
+  margin-bottom: -40px;
+  border: 1px solid #fdfcfc;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.card-2 .header {
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.card-x1 {
+  margin-top: -10px;
+  width: 35%;
+  font-size: 24px;
+  margin: 5px;
+  height: 450px;
+  display: flex;
+  position: relative;
+  border-radius: 8px;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #d3d3d3;
+}
+
+.card-x1 h5 {
+  font-size: medium;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-x1 p {
+  font-size: large;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  position: relative;
+    
+}
+
+.card-x2 {
+  margin-top: -10px;
+  width: 35%;
+  font-size: 24px;
+  margin: 5px;
+  height: 450px;
+  display: flex;
+  position: relative;
+  border-radius: 8px;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #d3d3d3;
+}
+
+.card-x2 h5 {
+  font-size: medium;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-x2 p {
+  font-size: large;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+}
+
+.card-x3 {
+  margin-top: -10px;
+  width: 35%;
+  font-size: 24px;
+  margin: 5px;
+  height: 450px;
+  display: flex;
+  position: relative;
+  border-radius: 8px;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #d3d3d3;
+}
+
+.card-x3 h5 {
+  font-size: medium;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+}
+
+.card-x3 p {
+  font-size: large;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+}
+
+.card-x h5 {
+  font-size: small;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-z {
+  width: 81.5%;
+  font-size: 24px;
+  position: relative;
+  margin-top: 0;
+  border: 1px solid #fdfcfc;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+.card-3 {
+  display: flex;
+  color: var(--primary);
+  background-color: #d3d3d3;
+  border: 1px solid #a39e9e;
+  border-radius: 7px;
+  width: 300px;
+  height: 100px;
+  shape-image-threshold: calc(00.3s);
+  margin: 2px;
+  position: relative;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+
+.fa-thin-fa-handshake-fa-bounce {
+  color: #198754;
+  size: auto;
+  font-display: var(--primary);
+  position: relative;
+  font-size: 1em;
+}
+
+.card-3:hover {
+  border: 0px 0px 15px #000000;
+  box-shadow: 0px 0px 15px #000000;
+  background-color: #cac6c6;
+  border: 1px solid #a39e9e;
+  overflow: hidden;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -ms-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.2);
+  transition: all 200ms ease-in;
+  transform: scale(1.2);
+}
+
+:root {
+  --primary: #555bff;
+  --secondary: #22d2a0;
+  --background: white;
+  --green: #1fc11b;
+  --yellow: #ffd913;
+  --orange: #ff9c55;
+  --red: #ff5555;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(
+    var(--secondary) 30%,
+    var(--background) 30%
+  );
+  background-size: 2px 3px;
+  font-family: "Archivo", sans-serif;
+  color: var(--primary);
+}
+
+.card-3 p {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  text-transform: uppercase;
+  position: inherit;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000;
+}
+
+.card h2 {
+  font-size: 14px;
+  font-family: "Archivo Black", "Archivo", sans-serif;
+  font-weight: normal;
+}
+
+.card-img {
+  width: 100%;
+  margin-top: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+/*===================================== accordion css ============================================ */
+
+.header {
+  margin-top: 0;
+  font-size: medium;
+  font-weight: 400;
+  font-style: italic;
+  top: 25px;
+  position: absolute;
+}
+
+
+.accordion-accordion-flush .accordion-item {
+  width: 400px;
+  font-weight: 50;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 5px;
+  top: 80px;
+}
+
+.accordion-card .accordion-header .h3{
+color: #000;
+margin-top: 38px;
+margin-bottom: 25px;
+margin-left: 10%;
+font-size: large;
+font-weight: 800;
+font-family: italic;
+font-style: normal;
+text-transform: capitalize;
+text-align: justify;
+}
